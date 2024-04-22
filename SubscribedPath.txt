@@ -1,0 +1,8 @@
+clash.meta\ip_Update
+hysteria\ip_Update
+hysteria2\ip_Update
+naiveproxy\ip_Update
+Quick\ip_Update
+singbox\ip_Update
+v2go\ip_Update
+Xray\ip_Update

@@ -1,0 +1,106 @@
+secret: dongtaiwang.com
+mixed-port: 7890
+allow-lan: false
+log-level: info
+dns:
+  enabled: true
+  nameserver:
+    - 119.29.29.29
+    - 223.5.5.5
+  fallback-filter:
+    geoip: false
+    ipcidr:
+      - 240.0.0.0/4
+      - 0.0.0.0/32
+proxies:
+  - {"name":"dongtaiwang.com_1","type":"vmess","server":"yh7.dtku41.xy","port":8080,"cipher":"auto","uuid":"d9c5ec6a-a8d8-4732-8447-56fbd2f93e96","alterId":0,"tls":false,"skip-cert-verify":true,"servername":"concentrations-taxi-about-recognised.trycloudflare.com","network":"ws","ws-opts":{"path":"d9c5ec6a-a8d8-4732-8447-56fbd2f93e96-vm","headers":{"host":"concentrations-taxi-about-recognised.trycloudflare.com"}}}
+  - {"name":"dongtaiwang.com_2","type":"vmess","server":"yh9.dtku41.xyz","port":8080,"cipher":"auto","uuid":"ef8c954e-014f-4b36-8273-9b5086afab34","alterId":0,"tls":false,"skip-cert-verify":true,"servername":"hang-broke-john-neither.trycloudflare.com","network":"ws","ws-opts":{"path":"ef8c954e-014f-4b36-8273-9b5086afab34-vm","headers":{"host":"hang-broke-john-neither.trycloudflare.com"}}}
+  - {"name":"dongtaiwang.com_3","type":"vmess","server":"yh1.dtku41.xyz","port":8080,"cipher":"auto","uuid":"028c8131-9e3e-4836-94ac-ea7f24d4d05a","alterId":0,"tls":false,"skip-cert-verify":true,"servername":"booty-pensions-scheduling-blogging.trycloudflare.com","network":"ws","ws-opts":{"path":"028c8131-9e3e-4836-94ac-ea7f24d4d05a-vm","headers":{"host":"booty-pensions-scheduling-blogging.trycloudflare.com"}}}
+  - {"name":"dongtaiwang.com_4","type":"vmess","server":"yh6.dtku41.xy","port":8080,"cipher":"auto","uuid":"82cb93a3-65a9-4dac-a2a7-d997b6c26d6a","alterId":0,"tls":false,"skip-cert-verify":true,"servername":"fantastic-doe-bids-ended.trycloudflare.com","network":"ws","ws-opts":{"path":"82cb93a3-65a9-4dac-a2a7-d997b6c26d6a-vm","headers":{"host":"fantastic-doe-bids-ended.trycloudflare.com"}}}
+proxy-groups:
+  - name: 🚀 节点选择
+    type: select
+    proxies:
+      - ♻️ 自动选择
+      - DIRECT
+      - dongtaiwang.com_1
+      - dongtaiwang.com_2
+      - dongtaiwang.com_3
+      - dongtaiwang.com_4
+  - name: ♻️ 自动选择
+    type: url-test
+    url: https://www.gstatic.com/generate_204
+    interval: 300
+    tolerance: 50
+    proxies:
+      - dongtaiwang.com_1
+      - dongtaiwang.com_2
+      - dongtaiwang.com_3
+      - dongtaiwang.com_4
+  - name: 🌍 国外媒体
+    type: select
+    proxies:
+      - 🚀 节点选择
+      - ♻️ 自动选择
+      - 🎯 全球直连
+      - dongtaiwang.com_1
+      - dongtaiwang.com_2
+      - dongtaiwang.com_3
+      - dongtaiwang.com_4
+  - name: 📲 电报信息
+    type: select
+    proxies:
+      - 🚀 节点选择
+      - 🎯 全球直连
+      - dongtaiwang.com_1
+      - dongtaiwang.com_2
+      - dongtaiwang.com_3
+      - dongtaiwang.com_4
+  - name: Ⓜ️ 微软服务
+    type: select
+    proxies:
+      - 🎯 全球直连
+      - 🚀 节点选择
+      - dongtaiwang.com_1
+      - dongtaiwang.com_2
+      - dongtaiwang.com_3
+      - dongtaiwang.com_4
+  - name: 🍎 苹果服务
+    type: select
+    proxies:
+      - 🚀 节点选择
+      - 🎯 全球直连
+      - dongtaiwang.com_1
+      - dongtaiwang.com_2
+      - dongtaiwang.com_3
+      - dongtaiwang.com_4
+  - name: 🎯 全球直连
+    type: select
+    proxies:
+      - DIRECT
+      - 🚀 节点选择
+      - ♻️ 自动选择
+  - name: 🛑 全球拦截
+    type: select
+    proxies:
+      - REJECT
+      - DIRECT
+  - name: 🍃 应用净化
+    type: select
+    proxies:
+      - REJECT
+      - DIRECT
+  - name: 🐟 漏网之鱼
+    type: select
+    proxies:
+      - 🚀 节点选择
+      - 🎯 全球直连
+      - ♻️ 自动选择
+      - dongtaiwang.com_1
+      - dongtaiwang.com_2
+      - dongtaiwang.com_3
+      - dongtaiwang.com_4
+   
+
+rules:
+  - MATCH,🚀 节点选择
