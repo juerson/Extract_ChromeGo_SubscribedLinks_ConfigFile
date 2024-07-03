@@ -4,7 +4,7 @@ name: Run main.py and commit results
 on:
   push:
     branches:
-      - main # 默认分支名
+      - master # 默认分支名
   schedule:
     - cron: "*/5 * * * *" # 每5分钟执行一次（TUC时间）
     # - cron: "*/10 * * * *" # 每10分钟执行一次（TUC时间）
@@ -41,4 +41,4 @@ jobs:
           git add .
           git commit -m "$BEIJING_TIME"
           git pull
-          git push -u origin main
+          git push -u origin master
