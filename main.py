@@ -153,7 +153,7 @@ async def main():
     # 文件名和文件夹
     subscribed_links_file = "./SubscribedPath.txt"
     valid_links_file = "./valid_links.txt"
-    output_folder = "./Download"
+    output_folder = "./output"
 
     # 从LinksPath.txt读取路径
     all_paths = read_paths_from_file(subscribed_links_file)
