@@ -151,9 +151,9 @@ async def fetch_urls_content(key: str, urls: set) -> (str, dict, dict):
 
 async def main():
     # 文件名和文件夹
-    subscribed_links_file = "SubscribedPath.txt"
-    valid_links_file = "valid_links.txt"
-    output_folder = "Download"
+    subscribed_links_file = "./SubscribedPath.txt"
+    valid_links_file = "./valid_links.txt"
+    output_folder = "./Download"
 
     # 从LinksPath.txt读取路径
     all_paths = read_paths_from_file(subscribed_links_file)
