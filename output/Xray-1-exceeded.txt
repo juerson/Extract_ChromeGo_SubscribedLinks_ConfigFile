@@ -1,1 +1,0 @@
-Package size exceeded the configured limit of 50 MB. Try https://github.com/Alvin9999/pac2/tree/master/clash/2/config.json instead.
